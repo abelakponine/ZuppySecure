@@ -11,7 +11,7 @@
  
  <b>ZuppySecure zuppy = new ZuppySecure();</b>
  
- ## Features
+ ## Main Features
  1. KeyPair Generator
  
         Constructor: ZuppySecure(); // generates a new KeyPair and resets all field properties;
@@ -40,5 +40,8 @@
  
         Method: zuppy.sign(String data, PrivateKey); // this is used to sign the input data and it returns an encrypted String of the signature
         Method: zuppy.verify(String data, String signature, PublicKey); // this method decrypts the encryption of the signature then verifies it, it returns a boolean (true|false)
-    
+
+5. Get PublicKey
+       
+       Method: zuppy.getKeyPair().getPublic(); // this method is used to retrieve publicKey from keyPair
     
