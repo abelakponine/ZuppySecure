@@ -1,14 +1,17 @@
+<h1>Example code</h1>
 
-package org.zuppy.secure;
+<code>
+	package org.zuppy.secure;
 
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
-import java.security.SignatureException;
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
+	import java.security.InvalidAlgorithmParameterException;
+	import java.security.InvalidKeyException;
+	import java.security.NoSuchAlgorithmException;
+	import java.security.PublicKey;
+	import java.security.SignatureException;
+	import javax.crypto.BadPaddingException;
+	import javax.crypto.IllegalBlockSizeException;
+	import javax.crypto.NoSuchPaddingException;
+</code>
 
 public class Main {
 
@@ -20,16 +23,15 @@ public class Main {
 		PublicKey publicKey = zuppy.getKeyPair().getPublic();
 		// Use case example
 		System.out.println("\n"
-				+"Generate KeyPair: "+zuppy.generateKeyPair()
-				+"\nSHA-256: "+hash
-				+"\nPublic Key: "	+zuppy.getPublicKey()
-				+"\nEncrypted: "	+encryption
-				+"\nDecrypted: "	+zuppy.decrypt(encryption, "ZuppySecure")
-				+"\nSignature: "	+signedData
-				+"\nVerification: "	+zuppy.verify("Hello World", signedData, publicKey));
-	}
+			+"Generate KeyPair: "+zuppy.generateKeyPair()
+			+"\nSHA-256: "+hash
+			+"\nPublic Key: "	+zuppy.getPublicKey()
+			+"\nEncrypted: "	+encryption
+			+"\nDecrypted: "	+zuppy.decrypt(encryption, "ZuppySecure")
+			+"\nSignature: "	+signedData
+			+"\nVerification: "	+zuppy.verify("Hello World", signedData, publicKey));
+	}	
 }
-
 
 ## Output Result
 
